@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gear Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/123.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: white" title="Homepage">
+                <img src="img/logom.jpg" alt="Explore360 Logo" class="logo-img" width="90" height="90" />
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li>
+                    <a href="tourist-attraction.html" title="Having the gear you want view your next destination">Tourist Attraction</a>
+                </li>
+                <li>
+                    <a href="login.html" title="Login to your account"><span class="material-icons">login</span></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-cart">
+            <input type="text" placeholder="Search items..." />
+            <a href="cart.html" class="cart-icon" onclick="toggleCartModal()">🛒</a>
+        </div>
+    </header>
+
+    <h1>Gear Store</h1>
+    <p class="store-description">Get the gear you need for your next adventure!</p>
+
+    <div class="gear-category">
+        <h2>Outdoor Adventure Gear</h2>
+        <p>For the outdoor enthusiast, we've got you covered with our selection of outdoor gear.</p>
+
+        <div class="gear-items">
+            <!-- Hiking Boots -->
+            <div class="gear-item">
+                <img src="img/hikingboots.jpg" alt="Hiking Boots" />
+                <h3>Hiking Boots</h3>
+                <p>Sturdy and waterproof, perfect for tackling rough terrain.</p>
+                <div class="price-container">
+                    <span class="price">R600</span>
+                    <button class="buy-btn" onclick="viewItem(1, 'Hiking Boots', 600)">View Item</button>
+                </div>
+            </div>
+            <!-- Backpacks -->
+            <div class="gear-item">
+                <img src="img/hikingbackpack.jpg" alt="Backpacks" />
+                <h3>Backpacks</h3>
+                <p>Comfortable and spacious, designed for long hikes and camping trips.</p>
+                <div class="price-container">
+                    <span class="price">R400</span>
+                    <button class="buy-btn" onclick="viewItem(2, 'Backpacks', 400)">View Item</button>
+                </div>
+            </div>
+            <!-- Trekking Poles -->
+            <div class="gear-item">
+                <img src="img/trekkingpoles.jpg" alt="Trekking Poles" />
+                <h3>Trekking Poles</h3>
+                <p>Lightweight and adjustable, providing extra stability on the trail.</p>
+                <div class="price-container">
+                    <span class="price">R260</span>
+                    <button class="buy-btn" onclick="viewItem(3, 'Trekking Poles', 260)">View Item</button>
+                </div>
+            </div>
+            <!-- Water Bottles -->
+            <div class="gear-item">
+                <img src="img/waterbottle.jpg" alt="Water Bottles" />
+                <h3>Water Bottles</h3>
+                <p>Stay hydrated on the go with our BPA-free water bottles.</p>
+                <div class="price-container">
+                    <span class="price">R80</span>
+                    <button class="buy-btn" onclick="viewItem(4, 'Water Bottles', 80)">View Item</button>
+                </div>
+            </div>
+            <!-- Camping Tents -->
+            <div class="gear-item">
+                <img src="img/campint.jpg" alt="Camping Tents" />
+                <h3>Camping Tents</h3>
+                <p>Camping tent - MH100 XXL - 4 person.</p>
+                <div class="price-container">
+                    <span class="price">R2500</span>
+                    <button class="buy-btn " onclick="viewItem(5, 'Camping Tents', 2500)">View Item</button>
+                </div>
+            </div>
+            <!-- First Aid Kits -->
+            <div class="gear-item">
+                <img src="img/firstaid.jpg" alt="First Aid Kits" />
+                <h3>First Aid Kits</h3>
+                <p>Be prepared for any situation with our comprehensive first aid kits.</p>
+                <div class="price-container">
+                    <span class="price">R600</span>
+                    <button class="buy-btn" onclick="viewItem(6, 'First Aid Kits', 600)">View Item</button>
+                </div>
+            </div>
+
+            <!-- Bicycle Helmet -->
+            <div class="gear-item">
+                <img src="img/bicyclehelmet.jpg" alt="Bicycle Helmet" />
+                <h3>Bicycle Helmet</h3>
+                <p>Trek Velocis Mips Road Bike Helmet</p>
+                <div class="price-container">
+                    <span class="price">R2000</span>
+                    <button class="buy-btn" onclick="viewItem(7, 'Bicycle Helmet', 2000)">View Item</button>
+                </div>
+            </div>
+
+            <!-- Carabiners -->
+            <div class="gear-item">
+                <img src="img/carabiners.jpg" alt="Carabiners" />
+                <h3>Carabiners</h3>
+                <p>Domum Twist Lock Climbing Carabiner Clips, Black</p>
+                <div class="price-container">
+                    <span class="price">R400</span>
+                    <button class="buy-btn" onclick="viewItem(8, 'Carabiners', 400)">View Item</button>
+                </div>
+            </div>
+
+            <!-- Wetsuit -->
+            <div class="gear-item">
+                <img src="img/wetsuits.jpg" alt="Wetsuit" />
+                <h3>Wetsuit</h3>
+                <p>Maverick Wetsuit</p>
+                <div class="price-container">
+                    <span class="price">R700</span>
+                    <button class="buy-btn" onclick="viewItem(9, 'Wetsuit', 700)">View Item</button>
+                </div>
+            </div>
+
+            <!-- Waterproof bags -->
+            <div class="gear-item">
+                <img src="img/waterbag.jpg" alt="Waterproof Bag" />
+                <h3>Waterproof Bag</h3>
+                <p>Ocean and Earth - Bag Waterproof Wetsuit Bag</p>
+                <div class="price-container">
+                    <span class="price">R800</span>
+                    <button class="buy-btn" onclick="viewItem(10, 'Waterproof Bag', 800)">View Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Explore360. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal" style="display: none">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="checkout()" class="checkout-btn">Checkout</button>
+        <button onclick="toggleCartModal()" class="close-btn">Close</button>
+    </div>
+
+    <script src="app.js"></script>
+	<script src="cart.js"></script>
+</body>
+</html>
